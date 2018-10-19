@@ -1,22 +1,24 @@
 <?php
 
-$booleanTrue;
-$booleanFalse;
+$booleanTrue = true;
+$booleanFalse = false;
 
-$int;
+$int = 10;
 
-$float;
+$float = 10.3333;
 
-$integer;
+$integer = 123;
 
-$double;
+$double = 23.333;
 
-$string;
+$string = "alves";
 
-$array;
+$array = ["dfsdfss", "cv"];
 
-$doubleDimenssionArray;
+$doubleDimenssionArray = [[2,4],[6,7]];
 
-$associativeArray;
+$associativeArray = [
+0 => "Shaolin Monk",
+1 => "Drunken Master"];
 
-$null;
+$null = null;
