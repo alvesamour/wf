@@ -15,10 +15,13 @@ $string = "alves";
 
 $array = ["dfsdfss", "cv"];
 
-$doubleDimenssionArray = [[2,4],[6,7]];
+$doubleDimenssionArray = [
+    [3, 5],
+    [2, 8]
+];
 
 $associativeArray = [
-0 => "Shaolin Monk",
-1 => "Drunken Master"];
-
+    'p' => 3,
+    'i' => 14
+];
 $null = null;
