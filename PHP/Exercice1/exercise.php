@@ -16,8 +16,8 @@ $string = "alves";
 $array = ["dfsdfss", "cv"];
 
 $doubleDimenssionArray = [
-    [3, 5],
-    [2, 8]
+    ["dddd", 5],
+    [2, "hhhhh"]
 ];
 
 $associativeArray = [
