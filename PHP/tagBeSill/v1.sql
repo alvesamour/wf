@@ -33,3 +33,24 @@ CREATE TABLE IF NOT EXISTS ProjectCategory (
     FOREIGN KEY(projectId) REFERENCES project(id),
 	FOREIGN KEY(categoryId) REFERENCES category(id)
   ) ENGINE=INNODB;  
+
+INSERT INTO category(label, description) VALUES
+	('IT', 'lorem ipsum dolor sit amet'),
+    ('ITIL', 'lorem ipsum dolor sit amet'),
+    ('ERP', 'lorem ipsum dolor sit amet');
+    
+INSERT INTO status(label, description) VALUES
+	('new', 'lorem ipsum dolor sit amet'),
+    ('In progress', 'lorem ipsum dolor sit amet'),
+    ('Blocked', 'lorem ipsum dolor sit amet'),
+    ('Resolved', 'lorem ipsum dolor sit amet');
+
+INSERT INTO project(title, description, image, publishingDate, statusId) VALUES
+	('restaurant-alves', 'lorem ipsum dolor sit amet', 'https://picsum.photos/100/100/?random', NOW(), 1),
+    ('buy-car', 'lorem ipsum dolor sit amet', 'https://picsum.photos/100/100/?random', NOW(), 3);
+
+INSERT INTO ProjectCategory VALUES
+	(1, 1),
+    (2, 2),
+    (2, 3);
+    
