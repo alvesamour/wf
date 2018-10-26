@@ -1,56 +1,36 @@
-drop database tagBeSill;
-CREATE DATABASE  tagBeSill CHARSET UTF8;
-use tagBeSill;
+drop database tagbesill;
+CREATE DATABASE IF NOT EXISTS tagBeSill;
 
-CREATE TABLE IF NOT EXISTS `status`(
-	id INT(10) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+USE tagBeSill;
+
+CREATE TABLE IF NOT EXISTS Status(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     label VARCHAR(255) NOT NULL,
-    description BLOB
-) ENGINE=INNODB;
+    description BLOB NOT NULL
+) engine InnoDB;
 
-CREATE TABLE IF NOT EXISTS project(
-	id INT(10) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS Project(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     description BLOB NOT NULL,
-    image VARCHAR(255) NOT NULL,
+    image VARCHAR(255) DEFAULT NULL,
     publishingDate DATETIME DEFAULT NULL,
-    creationDate DATETIME NOT NULL DEFAULT current_timestamp,
-    updatedAt DATETIME NOT NULL default current_timestamp,
-    statusId INT UNSIGNED NOT NULL,
-    FOREIGN KEY(statusId) REFERENCES `status` (id)
-)  ENGINE=INNODB;
+    creationDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    statusId INTEGER UNSIGNED NOT NULL,
+    FOREIGN KEY (statusId) REFERENCES status(id)
+) engine InnoDB;
 
-CREATE TABLE IF NOT EXISTS category(
-	id INT(10) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS Category(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     label VARCHAR(255) NOT NULL,
-    description BLOB
-) ENGINE=INNODB;
+    description BLOB NOT NULL
+) ENGINE InnoDB;
 
-CREATE TABLE IF NOT EXISTS ProjectCategory (
-	projectId INT UNSIGNED,
-    categoryId INT UNSIGNED,
-    PRIMARY KEY(projectId, categoryId),
-    FOREIGN KEY(projectId) REFERENCES project(id),
-	FOREIGN KEY(categoryId) REFERENCES category(id)
-  ) ENGINE=INNODB;  
-
-INSERT INTO category(label, description) VALUES
-	('IT', 'lorem ipsum dolor sit amet'),
-    ('ITIL', 'lorem ipsum dolor sit amet'),
-    ('ERP', 'lorem ipsum dolor sit amet');
-    
-INSERT INTO status(label, description) VALUES
-	('new', 'lorem ipsum dolor sit amet'),
-    ('In progress', 'lorem ipsum dolor sit amet'),
-    ('Blocked', 'lorem ipsum dolor sit amet'),
-    ('Resolved', 'lorem ipsum dolor sit amet');
-
-INSERT INTO project(title, description, image, publishingDate, statusId) VALUES
-	('restaurant-alves', 'lorem ipsum dolor sit amet', 'https://picsum.photos/100/100/?random', NOW(), 1),
-    ('buy-car', 'lorem ipsum dolor sit amet', 'https://picsum.photos/100/100/?random', NOW(), 3);
-
-INSERT INTO ProjectCategory VALUES
-	(1, 1),
-    (2, 2),
-    (2, 3);
-    
+CREATE TABLE IF NOT EXISTS ProjectCategory(
+	projectId INTEGER UNSIGNED,
+    categoryId INTEGER UNSIGNED,
+    PRIMARY KEY (projectId, categoryId),
+    FOREIGN KEY (projectId) REFERENCES Project(id),
+    FOREIGN KEY (categoryId) REFERENCES Category(id)
+) ENGINE InnoDB;

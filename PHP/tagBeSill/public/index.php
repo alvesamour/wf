@@ -1,16 +1,17 @@
 <?php 
 
 $config = include __DIR__ . '/../config/config.php';
-require_once __DIR__ . '/../model/Project.php';
+require_once __DIR__.'/../model/Project.php';
 
 try {
     $projects = getAllProjects();
-}catch (Exception $e){
+} catch (Exception $e) {
     echo 'An error occured with code : '.$e->getMessage();
     exit;
 }
 
-var_dump($projects->fetchAll());
+include __DIR__ . '/../view/homepage.html.php';
+
 /*
 -> go in config and return config
 -> require project.php
@@ -21,4 +22,6 @@ var_dump($projects->fetchAll());
     -> send a query
     -> return the result
 */
-   
+
+
+
