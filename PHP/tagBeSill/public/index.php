@@ -11,6 +11,7 @@ try {
 }
 
 include __DIR__ . '/../view/homepage.html.php';
+//include __DIR__ . '/../view/User.html.php';
 
 /*
 -> go in config and return config
