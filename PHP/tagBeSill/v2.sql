@@ -25,14 +25,12 @@ CREATE TABLE IF NOT EXISTS projectUser(
 
 USE tagBeSill;
 INSERT INTO Role(label, description) VALUES
-	('ERP', 'Lorem ipsum dolor sit amet'),
-	('DMZ', 'Lorem ipsum dolor sit amet');
+	('ERP', 'Lorem ipsum dolor sit amet');
+	
 
-INSERT INTO `User`(nickname, `password`) VALUES
-	('Analysis', 'Lorem ipsum'),
+
 	
  
-INSERT INTO projectUser VALUES
-	(1, 1),
-	(1, 2),
-	(2, 2);
+
+	
+    
