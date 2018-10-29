@@ -31,6 +31,11 @@
 					class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/register.php'){?>active<?php }?>">
 					<a class="nav-link" href="/register.php">Register</a>
 				</li>
+				
+				<li
+					class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/login.php'){?>active<?php }?>">
+					<a class="nav-link" href="/login.php">Login</a>
+				</li>
 			</ul>
 		</div>
 
