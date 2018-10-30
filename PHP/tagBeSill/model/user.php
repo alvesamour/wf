@@ -15,6 +15,7 @@ require_once __DIR__ . '/connection.php';
  * @return int
  */
 
+
 function createUser(string $nickname, string $password, int $roleId = 1) : int {//return the id of the inserted element
     global $connection;
 
@@ -54,3 +55,53 @@ function loginUser(string $nickname) : ?array {
     return null;
     
 }
+
+/**
+ * Open a session for the user
+ * 
+ * User information will be setored in the session superglobal. Return true iôn success, false on failure.
+ * 
+ * @param array $user The user to LogicException
+ * 
+ * @ return bool
+ */
+
+function LogUser(array $users) : bool {
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
+    $_SESSION['USER'] = $users;
+    
+    return true;
+}
+    /**
+     * Get current user
+     * 
+     * Return the current logged user if exit in the session. If not, return null.
+     * 
+     * @return array|null
+     */
+
+function getCurrentUser() {
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
+    return $_SESSION['USER'] ?? null;
+}
+
+/**
+ * Logout
+ * 
+ * Remove the session 
+ */
+
+function Logout() {
+    if (session_status() !== PHP_SESSION_ACTIVE) {//PHP_SESSION_ACTIVE constant
+        session_start();
+    }
+    $_SESSION = [];
+    session_destroy();
+    
+    return true;
+}
+

@@ -1,3 +1,8 @@
+<?php 
+$config = include __DIR__ . '/../config/config.php';
+require_once __DIR__.'/../model/user.php';
+?>
+
 <header class="container mb-6">
 
 	<div class="row">
@@ -28,6 +33,12 @@
 					<a class="nav-link" href="/"> Home </a>
 				</li>
 				<li
+				    <?php if (getCurrentUser() !== null){ ?>
+					class="nav-item ">
+					<a class="nav-link" href="/logout.php">Logout</a>
+				</li>
+				<?php } else {?>
+				<li
 					class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/register.php'){?>active<?php }?>">
 					<a class="nav-link" href="/register.php">Register</a>
 				</li>
@@ -36,6 +47,7 @@
 					class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/login.php'){?>active<?php }?>">
 					<a class="nav-link" href="/login.php">Login</a>
 				</li>
+				<?php }?>
 			</ul>
 		</div>
 

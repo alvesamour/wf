@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
        
     if ($users && $_POST['Password'] == $users['password']) {
+        LogUser($users);
          $success = true;
     } else {
          $error = true;
@@ -24,3 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 include __DIR__ . '/../view/login.html.php';
+if (session_status() === PHP_SESSION_ACTIVE) {
+    session_write_close();
+}
