@@ -1,4 +1,3 @@
-USE tagBeSill;
 INSERT INTO Category(label, description) VALUES
 	('Management', 'Lorem ipsum dolor sit amet'),
 	('ERP', 'Lorem ipsum dolor sit amet'),

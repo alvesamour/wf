@@ -1,12 +1,9 @@
-<?php 
-$config = include __DIR__ . '/../config/config.php';
-require_once __DIR__.'/../model/user.php';
+<?php
+require_once __DIR__.'/../model/User.php';
 ?>
-
-<header class="container mb-6">
-
+<header class="container mb-5 mt-2">
 	<div class="row">
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 			<img alt="Logo" src="/img/logo.png" class="img-fluid">
 		</div>
 		<div class="col align-self-end">
@@ -16,42 +13,51 @@ require_once __DIR__.'/../model/user.php';
 				</strong> <span class="fs-05">Project management system</span>
 			</h1>
 		</div>
-
 	</div>
-	<hr>
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded mt-3">
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li
-					class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/'){?>active<?php }?>">
-					<a class="nav-link" href="/"> Home </a>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/'){?>active<?php }?>">
+					<a class="nav-link" href="/">
+						Home
+					</a>
 				</li>
-				<li
-				    <?php if (getCurrentUser() !== null){ ?>
-					class="nav-item ">
-					<a class="nav-link" href="/logout.php">Logout</a>
+				<?php if (getCurrentUser() !== null) { ?>
+				<li class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/add/project'){?>active<?php }?>">
+					<a class="nav-link" href="/add/project">
+						Add project
+					</a>
 				</li>
-				<?php } else {?>
-				<li
-					class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/register.php'){?>active<?php }?>">
-					<a class="nav-link" href="/register.php">Register</a>
+				<?php } ?>
+			</ul>
+			<ul class="navbar-nav navbar-right">
+				<?php if (getCurrentUser() !== null) { ?>
+				<li class="nav-item">
+					<a class="nav-link" href="/logout.php">
+						logout
+					</a>
 				</li>
-				
-				<li
-					class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/login.php'){?>active<?php }?>">
-					<a class="nav-link" href="/login.php">Login</a>
+				<?php } else { ?>
+				<li class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/register.php'){?>active<?php }?>">
+					<a class="nav-link" href="/register.php">
+						Register
+					</a>
 				</li>
-				<?php }?>
+				<li class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/login.php'){?>active<?php }?>">
+					<a class="nav-link" href="/login.php">
+						login
+					</a>
+				</li>
+				<?php } ?>
 			</ul>
 		</div>
-
 	</nav>
-
-
 </header>

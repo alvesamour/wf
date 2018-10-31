@@ -1,43 +1,36 @@
 <?php
-$title = 'Tag be sill Login';
+$title = 'TagBeSill login';
 
 if (isset($success) && $success) {
-    $success = '<p class="alert alert-success">Login accepted</p>';
+    $success = '<p class="alert alert-success">You are logged</p>';
 } else {
     $success = '';
 }
-
 if (isset($error) && $error) {
-    $error = '<p class="alert alert-warning">Login failed</p>';
+    $error = '<p class="alert alert-warning">Login failed, check your credential informations</p>';
 } else {
     $error = '';
 }
 
 $content = <<<EOT
-<div class="container">
-    $success
-    $error
-    <h2>Login</h2>
-    <p>Please fill in your credentials to login.</p>
-<form method="POST">
-  <div class="form-group">
-    <label for="exampleName">User</label>
-    <input type="text" class="form-control" name="nickname" id="nickname" aria-describedby="emailHelp" placeholder="Username">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
-    
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" name="Password" id="Password" placeholder="Password">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
-    
-  </div>
-<a href="/">
-    <button type="button" class="btn btn-success">Back</button>
-</a>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
+    <div class="container">
+        $success
+        $error
+        <form method="POST">
+            <div class="form-group">
+                <label for="nickname">Nickname</label>
+                <input type="text" class="form-control" name="nickname" id="nickname" />
+            </div>
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+            <a href="/">
+                <button type="button" class="btn btn-success">Back</button>
+            </a>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 EOT;
 
 include __DIR__ . '/Base.html.php';

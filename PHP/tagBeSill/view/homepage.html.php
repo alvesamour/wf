@@ -1,5 +1,4 @@
 <?php
-$title = 'Tag be sill home page';
 
 $content = '<div class="container">';
 $content .= '<div class="row">';
@@ -36,7 +35,7 @@ foreach ($projects as $key => $project) {
     $categories = implode(' | ', $categories);
     
     $content .= <<<EOT
-    <div class="col-md-6 col-lg-4 my-4">
+    <div class="col-md-6 col-lg-3 my-3">
         <div class="card">
           <img class="card-img-top bg-secondary" src="$img" alt="Card image cap">
           <div class="card-body">
@@ -56,4 +55,17 @@ EOT;
 $content .= '</div>';
 $content .= '</div>';
 
+$title = 'Tag be sill home page';
+
 include __DIR__ . '/Base.html.php';
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,6 @@
 <?php 
 
-$config = include __DIR__ . '/../config/config.php';
 require_once __DIR__.'/../model/Project.php';
-
 
 try {
     $projects = getAllProjects();
@@ -12,7 +10,6 @@ try {
 }
 
 include __DIR__ . '/../view/homepage.html.php';
-//include __DIR__ . '/../view/User.html.php';
 
 /*
 -> go in config and return config

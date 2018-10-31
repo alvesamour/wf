@@ -1,4 +1,3 @@
-drop database tagbesill;
 CREATE DATABASE IF NOT EXISTS tagBeSill;
 
 USE tagBeSill;
