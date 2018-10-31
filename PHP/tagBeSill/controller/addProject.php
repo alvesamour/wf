@@ -21,13 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($field === 'picture') {
             continue;
         }
-        if (empty($_POST[$field])) {
+        if (empty($_POST[$field])) {//for data
             $errorCount++;
             $errors[$field][] = '<li>Please, provide a value for the field '.$field.'</li>';
         }
     }
     $image = null;
-    if (!empty($_FILES['picture'])) {
+    if (!empty($_FILES['picture'])) {//for files
         if ($_FILES['picture']['error'] !== UPLOAD_ERR_OK) {
             $errorCount++;
             $errors['picture'][] = '<li>Please, provide a correct file</li>';
