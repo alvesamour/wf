@@ -1,0 +1,59 @@
+drop database eCommerce;
+CREATE DATABASE IF NOT EXISTS eCommerce;
+
+USE eCommerce;
+
+CREATE TABLE IF NOT EXISTS categorie(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    label VARCHAR(255) NOT NULL,
+    description BLOB NOT NULL
+) engine InnoDB;
+
+CREATE TABLE administrator(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nickname VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+) ENGINE InnoDB;
+
+CREATE TABLE IF NOT EXISTS article(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description BLOB NOT NULL,
+    image VARCHAR(255) DEFAULT NULL,
+    marque VARCHAR(255) DEFAULT NULL,
+    prix VARCHAR(255) DEFAULT NULL,
+    categorieId INTEGER UNSIGNED NOT NULL,
+    FOREIGN KEY (categorieId) REFERENCES categorie(id),
+    administratorId INTEGER UNSIGNED NOT NULL,
+    FOREIGN KEY (administratorId) REFERENCES administrator(id)
+) engine InnoDB;
+
+CREATE TABLE user(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nickname VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+	administratorId INTEGER UNSIGNED,
+    FOREIGN KEY (administratorId) REFERENCES administrator(id)
+) ENGINE InnoDB;
+
+CREATE TABLE IF NOT EXISTS `client`(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    adresse VARCHAR(255) NOT NULL,
+    articleId INTEGER UNSIGNED,
+    FOREIGN KEY (articleId) REFERENCES article(id),
+    userId INTEGER UNSIGNED,
+    FOREIGN KEY (userId) REFERENCES user(id)
+) engine InnoDB;
+
+CREATE TABLE IF NOT EXISTS panier(
+	id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    quantite INT NOT NULL,
+	clientId INTEGER UNSIGNED,
+    FOREIGN KEY (clientId) REFERENCES client(id)
+) engine InnoDB;
+
+
+
