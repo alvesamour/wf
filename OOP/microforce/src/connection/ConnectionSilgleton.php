@@ -14,7 +14,7 @@ class ConnectionSilgleton
     
     static public function setConnection(\PDO $connection) : void
     {
-        self::$engine = $engine;
+        self::$connection = $connection;
     }
 }
 

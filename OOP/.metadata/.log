@@ -4620,3 +4620,137 @@ Caused by: java.lang.StackOverflowError
 	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.getSelectedProposal(CompletionProposalPopup.java:916)
 	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.setProposals(CompletionProposalPopup.java:1156)
 	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$1.run(CompletionProposalPopup.java:370)
+
+!ENTRY org.eclipse.php.core 4 4 2018-11-19 14:16:00.812
+!MESSAGE null
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.getChar(BasicStructuredDocument.java:1281)
+	at org.eclipse.php.core.codeassist.CompletionCompanion.determineNamespace(CompletionCompanion.java:377)
+	at org.eclipse.php.core.codeassist.CompletionCompanion.<init>(CompletionCompanion.java:106)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:111)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:79)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:517)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:498)
+
+!ENTRY org.eclipse.php.core 4 4 2018-11-19 14:16:18.931
+!MESSAGE null
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.getChar(BasicStructuredDocument.java:1281)
+	at org.eclipse.php.core.codeassist.CompletionCompanion.determineNamespace(CompletionCompanion.java:377)
+	at org.eclipse.php.core.codeassist.CompletionCompanion.<init>(CompletionCompanion.java:106)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:111)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:79)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:517)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:498)
+
+!ENTRY org.eclipse.php.core 4 4 2018-11-19 14:16:18.940
+!MESSAGE null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext$AliasResolver.visitGeneral(AbstractCompletionContext.java:828)
+	at org.eclipse.dltk.ast.ASTVisitor.visit(ASTVisitor.java:51)
+	at org.eclipse.dltk.ast.declarations.ModuleDeclaration.traverse(ModuleDeclaration.java:68)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.resolveNamespace(AbstractCompletionContext.java:783)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.calculateNames(AbstractCompletionContext.java:672)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.isAbsoluteName(AbstractCompletionContext.java:727)
+	at org.eclipse.php.internal.core.codeassist.strategies.ElementsStrategy.getReplacementRangeForMember(ElementsStrategy.java:43)
+	at org.eclipse.php.internal.core.codeassist.strategies.TypesStrategy.apply(TypesStrategy.java:82)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:127)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:79)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:517)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:498)
+
+!ENTRY org.eclipse.php.core 4 4 2018-11-19 14:16:19.966
+!MESSAGE null
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.getChar(BasicStructuredDocument.java:1281)
+	at org.eclipse.php.core.codeassist.CompletionCompanion.determineNamespace(CompletionCompanion.java:377)
+	at org.eclipse.php.core.codeassist.CompletionCompanion.<init>(CompletionCompanion.java:106)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:111)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:79)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:517)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:498)
+
+!ENTRY org.eclipse.php.core 4 4 2018-11-19 14:16:19.978
+!MESSAGE null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext$AliasResolver.visitGeneral(AbstractCompletionContext.java:828)
+	at org.eclipse.dltk.ast.ASTVisitor.visit(ASTVisitor.java:51)
+	at org.eclipse.dltk.ast.declarations.ModuleDeclaration.traverse(ModuleDeclaration.java:68)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.resolveNamespace(AbstractCompletionContext.java:783)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.calculateNames(AbstractCompletionContext.java:672)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.isAbsoluteName(AbstractCompletionContext.java:727)
+	at org.eclipse.php.internal.core.codeassist.strategies.ElementsStrategy.getReplacementRangeForMember(ElementsStrategy.java:43)
+	at org.eclipse.php.internal.core.codeassist.strategies.TypesStrategy.apply(TypesStrategy.java:82)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:127)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:79)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:517)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:498)
+
+!ENTRY org.eclipse.php.core 4 4 2018-11-19 14:16:20.292
+!MESSAGE null
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.getChar(BasicStructuredDocument.java:1281)
+	at org.eclipse.php.core.codeassist.CompletionCompanion.determineNamespace(CompletionCompanion.java:377)
+	at org.eclipse.php.core.codeassist.CompletionCompanion.<init>(CompletionCompanion.java:106)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:111)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:79)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:517)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:498)
+
+!ENTRY org.eclipse.php.core 4 4 2018-11-19 14:16:20.299
+!MESSAGE null
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext$AliasResolver.visitGeneral(AbstractCompletionContext.java:828)
+	at org.eclipse.dltk.ast.ASTVisitor.visit(ASTVisitor.java:51)
+	at org.eclipse.dltk.ast.declarations.ModuleDeclaration.traverse(ModuleDeclaration.java:68)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.resolveNamespace(AbstractCompletionContext.java:783)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.calculateNames(AbstractCompletionContext.java:672)
+	at org.eclipse.php.internal.core.codeassist.contexts.AbstractCompletionContext.isAbsoluteName(AbstractCompletionContext.java:727)
+	at org.eclipse.php.internal.core.codeassist.strategies.ElementsStrategy.getReplacementRangeForMember(ElementsStrategy.java:43)
+	at org.eclipse.php.internal.core.codeassist.strategies.TypesStrategy.apply(TypesStrategy.java:82)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:127)
+	at org.eclipse.php.internal.core.codeassist.PHPCompletionEngine.complete(PHPCompletionEngine.java:79)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:517)
+	at org.eclipse.dltk.internal.core.Openable$CompletionThread.run(Openable.java:498)
+
+!ENTRY org.eclipse.ui 4 0 2018-11-19 16:50:14.714
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at java.util.Collections$SynchronizedList.get(Unknown Source)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.computeFilteredProposals(AsyncCompletionProposalPopup.java:310)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$1.run(CompletionProposalPopup.java:361)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)

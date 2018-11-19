@@ -13,6 +13,7 @@ use Symfony\Component\Templating\PhpEngine;
 use Symfony\Component\Templating\TemplateNameParser;
 use MicroForce\Engine\EngineSingleton;
 use MicroForce\connection\ConnectionSilgleton;
+use MicroForce\Factory\TemplateEngineFactory;
 
 class Kernel
 {
@@ -27,10 +28,12 @@ class Kernel
             
     }
     
-    public function loadTemplateEngine($templateLocation) : EngineInterface
+    public function loadTemplateEngine($config) : EngineInterface
     {
-        $loader = new FilesystemLoader($templateLocation.'/%name%');
-        return new PhpEngine(new TemplateNameParser(), $loader);
+        $factory = new TemplateEngineFactory(
+       $config['template_engine'],
+       $config['template_location'].'/%name%'
+            );
     }
     
     public function getConfig()

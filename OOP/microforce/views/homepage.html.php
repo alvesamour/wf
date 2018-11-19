@@ -7,7 +7,21 @@
 	
 	<body>
 		<h1>Mon Template</h1>
+		<table>
+			<thead>
+				<th>Firstname</th>
+				<th>Lastname</th>
+			</thead>
+			<tbody>
+				<?php foreach ($students as $student) { ?>
+					<tr>
+						<td><?= $view->escape($student->getFirstname()); ?></td>
+						<td><?= $view->escape($student->getLastname()); ?></td>
+					</tr>
+					<?php } ?>
+			</tbody>
 		
+		</table>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac tellus euismod, fermentum arcu at, auctor erat. In eu nunc orci.</br>
 			 Donec mollis ligula eros, a eleifend ligula pulvinar vitae. Etiam et tortor id erat feugiat volutpat sit amet quis quam. </br>
