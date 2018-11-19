@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Mon site Web MicroForce</title>
+	</head>
+	
+	<body>
+		<h1>Mon Template</h1>
+		
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac tellus euismod, fermentum arcu at, auctor erat. In eu nunc orci.</br>
+			 Donec mollis ligula eros, a eleifend ligula pulvinar vitae. Etiam et tortor id erat feugiat volutpat sit amet quis quam. </br>
+			 Sed elementum ut nisl ac finibus. Aliquam leo sem, ultrices eget rhoncus sed, bibendum a est. Nunc dictum nisl eget nisi luctus tempor.</br> 
+			 Duis felis sapien, tincidunt et bibendum ut, elementum quis mi. Maecenas eleifend facilisis ornare.</br>
+			 Proin vitae tincidunt nunc, ac efficitur ligula.</br>
+		</p>
+		
+		<div>
+			<h2>Belle Image</h2>
+			<img src="https://picsum.photos/200" alt="photo">
+		</div>
+		
+		<p>
+			Duis tincidunt ipsum sit amet eros commodo posuere. Aenean pharetra nisl id rutrum viverra. Vestibulum sit amet ultrices mi. Sed commodo, massa faucibus ultrices semper,</br>  
+			libero nulla consequat sapien, id consequat urna sem sit amet mauris.</br> 
+		</p>
+		<img src="https://picsum.photos/500/300/?random" alt="Aleatoire"></br> 
+	</body>
+</html>

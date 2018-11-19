@@ -1,0 +1,7 @@
+<?php
+namespace MicroForce\Engine;
+
+class EngineSingleton
+{
+}
+

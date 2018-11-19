@@ -1,0 +1,18 @@
+<?php
+namespace MicroForce\connection;
+
+
+
+
+
+
+
+
+
+  class ConnectionSilgleton  {
+  
+  
+
+  
+}
+
