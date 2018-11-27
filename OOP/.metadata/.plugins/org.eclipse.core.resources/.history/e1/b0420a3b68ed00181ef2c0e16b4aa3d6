@@ -1,0 +1,19 @@
+<?php
+namespace MicroForce\Model;
+
+
+
+use Microforce\Model\housing;
+
+
+
+
+
+
+  class House extends housing {
+  
+  
+
+  
+}
+

@@ -1,0 +1,7 @@
+<?php
+namespace Microforce\Model;
+
+class housing
+{
+}
+

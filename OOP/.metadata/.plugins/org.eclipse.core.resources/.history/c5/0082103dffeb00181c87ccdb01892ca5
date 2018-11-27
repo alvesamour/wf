@@ -1,0 +1,29 @@
+<?php 
+
+namespace MicroForce\Model;
+
+use MicroForce\connection\ConnectionSilgleton;
+
+class Student {
+    private $id;
+    private $firstname;
+    private $lastname;
+    
+    public function create(string $firstname, string $lastname) : Student
+    {
+        $connection = ConnectionSilgleton::getConnection();  
+        try {
+            $stmt = $connection->prepare('insert into students(firstname, lastname) value (:firstname, :lastname)');
+            $stmt->bindValue('firstname', $firstname);
+            $stmt->bindValue('lastname', $lastname);
+            $stmt->execute(['firstname' => $firstname, 'lastname' => $lastname]);
+            
+            $this->id = $connection->lastInsertId();
+            $this->firstname = $firstname;
+            $this->lastname = $lastname;
+        } catch (\Exception $e) {
+            return null;
+        }
+        return $this;
+    }
+}
