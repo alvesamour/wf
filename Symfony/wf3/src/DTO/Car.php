@@ -7,14 +7,14 @@ class Car
     public $color;
     public $seats = [];
     private $model;
-    
-    public function getModel() : string 
+
+    public function getModel() : string
     {
         return $this->model;
     }
-    
-    public function setModel(string $model) {
+
+    public function setModel(string $model)
+    {
         $this->model = $model;
     }
 }
-
