@@ -15,14 +15,31 @@ class AppFixtures extends Fixture
         $this->loadSeats($manager);
         $manager->flush();
     }
-    
+
+    public function loadSeats(ObjectManager $manager)
+    {
+        $seatList = [
+            'front left',
+            'front right',
+            'back left',
+            'back right'
+        ];
+
+        foreach ($seatList as $label) {
+            $seat = new Seat();
+            $seat->setLabel($label);
+
+            $manager->persist($seat);
+        }
+    }
+
     public function loadBrands(ObjectManager $manager)
     {
         $brandList = [
             'fiat',
             'pagani',
             'koenigsegg',
-            'bugatty',
+            'bugatti',
             'volkswagen',
             'renault',
             'porsche',
@@ -31,31 +48,11 @@ class AppFixtures extends Fixture
             'audi'
         ];
 
-        foreach ($brandList as $label){
+        foreach ($brandList as $label) {
             $brand = new Brand();
             $brand->setName($label);
-            
+
             $manager->persist($brand);
         }
-        $manager->flush();
     }
-    
-    public function loadSeats(ObjectManager $manager)
-    {
-        $seatList = [
-           'front-right',
-            'front-left',
-            'back-right',
-            'back-right'
-        ];
-        
-        foreach ($seatList as $label){
-            $seat = new Seat();
-            $seat->setLabel($label);
-            
-            $manager->persist($seat);
-        }
-        $manager->flush();
-    }
-    
 }
