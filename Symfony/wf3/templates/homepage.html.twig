@@ -3,6 +3,8 @@
 {% block title %}{{ parent() }} homepage{% endblock %}
 
 {% block body %}
+
+
 	<form>
         <div class="form-group row">
             <label for="brandSearch" class="col-sm-2 col-form-label">Search for a brand</label>
@@ -12,7 +14,7 @@
             </div>
         </div>
 	</form>
-	
+	{{ "<script>alert('test')</script>"|toBold }}
 	<ul id="searchResults">
 	</ul>
 {% endblock %}

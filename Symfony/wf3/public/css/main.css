@@ -1,1 +1,5 @@
 header, footer{background-color: grey;}
+.container .card_group .card{
+	display: flex;
+	margin: 1rem;
+}

@@ -29,7 +29,13 @@ class BrandController extends Controller
 
         $brands = $repository->findByNameLike($pattern);
 
-        $response = $this->json(['data' => $brands]);
+        $response = $this->json(
+            ['data' => $brands],
+            200,
+            [],
+            ['groups' => ['brand', 'car.model']]
+            
+        );
 
         if ($request->getMethod() == 'OPTIONS') {
             $response->setContent('');

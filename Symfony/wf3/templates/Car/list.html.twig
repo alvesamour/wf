@@ -1,32 +1,6 @@
 {% extends 'base.html.twig' %}
+{% import "Car/Macros.html.twig" as carMacro %}
 
 {% block body %}
-
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Brand</th>
-				<th>Model</th>
-				<th>Color</th>
-				<th>Seat count</th>
-				<th>&nbsp;</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for car in cars %}
-    			<tr>
-    				<td>{{ car.getBrand().getName() }}</td>
-    				<td>{{ car.getModel() }}</td>
-    				<td>{{ car.getColor() }}</td>
-    				<td>{{ car.getSeats()|length }}</td>
-    				<td>
-    					<a href="{{ path('car_details', {'car': car.getId()}) }}">
-    						<button class="btn btn-primary">Details</button>
-    					</a>
-    				</td>
-    			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-
+	{{ carMacro.carCardGroup(cars) }}
 {% endblock %}

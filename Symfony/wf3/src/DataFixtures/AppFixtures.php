@@ -6,6 +6,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\Brand;
 use App\Entity\Seat;
+use App\Entity\Role;
 
 class AppFixtures extends Fixture
 {
@@ -13,9 +14,24 @@ class AppFixtures extends Fixture
     {
         $this->loadBrands($manager);
         $this->loadSeats($manager);
+        $this->loadRoles($manager);
         $manager->flush();
     }
 
+    public function loadRoles(ObjectManager $manager)
+    {
+        $roleList = [
+            'ROLE_USER',
+            'ROLE_ADMIN'
+        ];
+        
+        foreach ($roleList as $roleLabel) {
+            $role = new Role();
+            $role->setLabel($roleLabel);
+            $manager->persist($role);
+        }
+    }
+    
     public function loadSeats(ObjectManager $manager)
     {
         $seatList = [

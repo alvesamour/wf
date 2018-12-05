@@ -7,14 +7,18 @@ use App\Entity\Car;
 use App\Form\CarFormType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class CarController extends Controller
 {
     /**
      * @Route("/car/create", name="create_car", methods={"GET", "POST"})
      */
-    public function createCar(Request $request)
-    {
+    public function createCar(
+        Request $request,
+        Session $session
+        ) {
+        
         $car = new Car();
         $form = $this->createForm(CarFormType::class, $car, ['standalone' => true]);
 
@@ -25,6 +29,7 @@ class CarController extends Controller
             $manager->persist($car);
             $manager->flush();
 
+            $session->getFlashBag()->add('success', 'The car was successfully created');
             // redirect
             return $this->redirectToRoute('homepage');
         }
