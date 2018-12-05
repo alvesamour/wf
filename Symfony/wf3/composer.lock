@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42a08389eb3111f14541e4ec8f5f7706",
+    "content-hash": "29991fa38e1bb27135f4fd6816ffe31d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1456,17 +1456,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/alvesamour/force-dbdoc.git",
-                "reference": "6c7834df5cda7465f31937f2d2a970e147ec626c"
+                "reference": "7209b7a5d49493a55b8a3d3e59d0f878cd8e237b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alvesamour/force-dbdoc/zipball/6c7834df5cda7465f31937f2d2a970e147ec626c",
-                "reference": "6c7834df5cda7465f31937f2d2a970e147ec626c",
+                "url": "https://api.github.com/repos/alvesamour/force-dbdoc/zipball/7209b7a5d49493a55b8a3d3e59d0f878cd8e237b",
+                "reference": "7209b7a5d49493a55b8a3d3e59d0f878cd8e237b",
                 "shasum": ""
             },
             "require": {
                 "symfony/config": ">=3.4@dev <5",
                 "symfony/dependency-injection": ">=3.4@dev <5",
+                "symfony/http-foundation": ">=3.4 <5",
                 "symfony/http-kernel": ">=3.4@dev <5"
             },
             "type": "library",
@@ -1489,7 +1490,7 @@
                 "source": "https://github.com/alvesamour/force-dbdoc/tree/master",
                 "issues": "https://github.com/alvesamour/force-dbdoc/issues"
             },
-            "time": "2018-12-05T11:19:10+00:00"
+            "time": "2018-12-05T14:21:32+00:00"
         },
         {
             "name": "jdorn/sql-formatter",

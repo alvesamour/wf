@@ -12,7 +12,7 @@ class Client {
 	async load() {
 		this.oReq = new XMLHttpRequest();
 		this.oReq.addEventListener("load", this.processResult.bind(this));
-		this.oReq.open("GET", "/brand/search?pattern=" + this.input.value);
+		this.oReq.open("GET", "/en/brand/search?pattern=" + this.input.value);
 		this.oReq.send();
 	}
 
