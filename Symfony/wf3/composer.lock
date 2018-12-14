@@ -1456,12 +1456,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/alvesamour/force-dbdoc.git",
-                "reference": "7209b7a5d49493a55b8a3d3e59d0f878cd8e237b"
+                "reference": "6af77574a7064aaac565a222b13ca6e505e0aa4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alvesamour/force-dbdoc/zipball/7209b7a5d49493a55b8a3d3e59d0f878cd8e237b",
-                "reference": "7209b7a5d49493a55b8a3d3e59d0f878cd8e237b",
+                "url": "https://api.github.com/repos/alvesamour/force-dbdoc/zipball/6af77574a7064aaac565a222b13ca6e505e0aa4f",
+                "reference": "6af77574a7064aaac565a222b13ca6e505e0aa4f",
                 "shasum": ""
             },
             "require": {
@@ -1490,7 +1490,7 @@
                 "source": "https://github.com/alvesamour/force-dbdoc/tree/master",
                 "issues": "https://github.com/alvesamour/force-dbdoc/issues"
             },
-            "time": "2018-12-05T14:21:32+00:00"
+            "time": "2018-12-05T14:29:10+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
